@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tap-asteroids"
+version = "0.1.0"
+description = ""
+authors = ["Ross Perry <perryr16@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+singer-python = "^5.11.0"
+requests = "^2.25.1"
+python-dotenv = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
