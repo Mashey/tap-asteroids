@@ -13,6 +13,9 @@ python-dotenv = "^0.15.0"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 vcrpy = "^4.1.1"
+pytest-vcr = "^1.0.2"
+autopep8 = "^1.5.5"
+black = {version = "^20.8b1", allow-prereleases = true}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
