@@ -1,0 +1,54 @@
+{
+    "type": ["object, null"],
+    "additionalProperties": false,
+    "properties" :{
+        "links": {
+            "type": ["object, null"],
+            "additionalProperties": false,
+            "properties":{
+                "next": { "type": ["string", "null"] },
+                "self": { "type": ["string", "null"] },
+            }
+        },
+        "page": {
+            "type": ["object, null"],
+            "additionalProperties": false,
+            "properties": {
+                "size": { "type": ["integer", "null"] },
+                "total_elements": { "type": ["integer", "null"] },
+                "total_pages": { "type": ["integer", "null"] },
+                "number" : { "type": ["integer", "null"] },
+            },
+        },
+        "near_earth_objects": {
+            "type": ["array", "null"],
+            "items": {
+                "type": ["object", "null"],
+                "additionalProperties": false,
+                "properties": {
+                    "links": {
+                        "type": ["object", "null"],
+                        "additionalProperties": false,
+                        "properties": {
+                            "self": {"type": ["string", "null"]}
+                        },
+                    },
+                    "id": { "type": ["string", "null"]},
+                    "neo_reference_id": { "type": ["string", "null"]},
+                    "name": { "type": ["string", "null"]},
+                    "name_limited": { "type": ["string", "null"]},
+                    "designation": { "type": ["string", "null"]},
+                    "nasa_jpl_url": { "type": ["string", "null"]},
+                    "absolute_magnitude_h": { "type": ["number", "null"]},
+                    "estimated_diameter": { 
+                        "type": ["object", "null"],
+                        "additionalProperties": false,
+                        "properties": {
+                            
+                        },
+                    },
+                }
+            }
+        }
+    }
+}
