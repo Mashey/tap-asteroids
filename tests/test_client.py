@@ -61,6 +61,27 @@ def test_get_browse_neos():
         assert 'miles' in estimated_diameter
         assert 'feet' in estimated_diameter
 
+        kilometers = estimated_diameter['meters']
+        assert 2 == len(kilometers.keys())
+        assert "estimated_diameter_min" in kilometers
+        assert "estimated_diameter_max" in kilometers
+
+        meters = estimated_diameter['meters']
+        assert 2 == len(meters.keys())
+        assert "estimated_diameter_min" in meters
+        assert "estimated_diameter_max" in meters
+
+        miles = estimated_diameter['miles']
+        assert 2 == len(miles.keys())
+        assert "estimated_diameter_min" in miles
+        assert "estimated_diameter_max" in miles
+
+        feet = estimated_diameter['feet']
+        assert 2 == len(feet.keys())
+        assert "estimated_diameter_min" in feet
+        assert "estimated_diameter_max" in feet
+
+
         orbital_data = near_earth_object['orbital_data']
         assert 23 == len(orbital_data.keys())
         assert 'orbit_id' in orbital_data
