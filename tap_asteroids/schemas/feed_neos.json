@@ -7,7 +7,7 @@
             "additionalProperties": false,
             "properties":{
                 "next": { "type": ["string", "null"] },
-                "self": { "type": ["string", "null"] },
+                "self": { "type": ["string", "null"] } 
             }
         },
         "element_count": { "type": ["number", "null"] },
@@ -41,7 +41,7 @@
                                         "additionalProperties": false,
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
-                                            "estimated_diameter_max": { "type": ["number", "null"] },
+                                            "estimated_diameter_max": { "type": ["number", "null"] }
                                         },
                                     },
                                     "meters": {
@@ -49,7 +49,7 @@
                                         "additionalProperties": false,
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
-                                            "estimated_diameter_max": { "type": ["number", "null"] },
+                                            "estimated_diameter_max": { "type": ["number", "null"] }
                                         },
                                     },
                                     "miles": {
@@ -57,7 +57,7 @@
                                         "additionalProperties": false,
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
-                                            "estimated_diameter_max": { "type": ["number", "null"] },
+                                            "estimated_diameter_max": { "type": ["number", "null"] }
                                         },
                                     },
                                     "feet": {
@@ -65,10 +65,10 @@
                                         "additionalProperties": false,
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
-                                            "estimated_diameter_max": { "type": ["number", "null"] },
-                                        },
-                                    },
-                                },
+                                            "estimated_diameter_max": { "type": ["number", "null"] }
+                                        }
+                                    }
+                                }
                             },
                             "is_potentially_hazardous_asteroid": { "type": "boolean"},
                             "close_approach_data": {
@@ -86,7 +86,7 @@
                                             "properties":{
                                                 "kilometers_per_second": { "type": ["string", "null"] },
                                                 "kilometers_per_hour": { "type": ["string", "null"] },
-                                                "miles_per_hour": { "type": ["string", "null"] },
+                                                "miles_per_hour": { "type": ["string", "null"] }
                                             }
                                         },
                                         "miss_distance": {
@@ -96,8 +96,8 @@
                                                 "astronomical": { "type": ["string", "null"] },
                                                 "lunar": { "type": ["string", "null"] },
                                                 "kilometers": { "type": ["string", "null"] },
-                                                "miles": { "type": ["string", "null"] },
-                                            },
+                                                "miles": { "type": ["string", "null"] }
+                                            }
                                         },
                                         "orbiting_body": { "type": ["string", "null"]}
                                     }

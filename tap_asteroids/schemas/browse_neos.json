@@ -7,7 +7,7 @@
             "additionalProperties": false,
             "properties":{
                 "next": { "type": ["string", "null"] },
-                "self": { "type": ["string", "null"] },
+                "self": { "type": ["string", "null"] }
             }
         },
         "page": {
@@ -17,7 +17,7 @@
                 "size": { "type": ["integer", "null"] },
                 "total_elements": { "type": ["integer", "null"] },
                 "total_pages": { "type": ["integer", "null"] },
-                "number" : { "type": ["integer", "null"] },
+                "number" : { "type": ["integer", "null"] }
             },
         },
         "near_earth_objects": {
@@ -31,7 +31,7 @@
                         "additionalProperties": false,
                         "properties": {
                             "self": {"type": ["string", "null"]}
-                        },
+                        }
                     },
                     "id": { "type": ["string", "null"]},
                     "neo_reference_id": { "type": ["string", "null"]},
@@ -49,7 +49,7 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
-                                    "estimated_diameter_max": { "type": ["number", "null"] },
+                                    "estimated_diameter_max": { "type": ["number", "null"] }
                                 },
                             },
                             "meters": {
@@ -57,7 +57,7 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
-                                    "estimated_diameter_max": { "type": ["number", "null"] },
+                                    "estimated_diameter_max": { "type": ["number", "null"] }
                                 },
                             },
                             "miles": {
@@ -65,7 +65,7 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
-                                    "estimated_diameter_max": { "type": ["number", "null"] },
+                                    "estimated_diameter_max": { "type": ["number", "null"] }
                                 },
                             },
                             "feet": {
@@ -73,10 +73,10 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
-                                    "estimated_diameter_max": { "type": ["number", "null"] },
-                                },
-                            },
-                        },
+                                    "estimated_diameter_max": { "type": ["number", "null"] }
+                                }
+                            }
+                        }
                     },
                     "is_potentially_hazardous_asteroid": { "type": "boolean"},
                     "close_approach_data": {
@@ -94,7 +94,7 @@
                                     "properties":{
                                         "kilometers_per_second": { "type": ["string", "null"] },
                                         "kilometers_per_hour": { "type": ["string", "null"] },
-                                        "miles_per_hour": { "type": ["string", "null"] },
+                                        "miles_per_hour": { "type": ["string", "null"] }
                                     }
                                 },
                                 "miss_distance": {
@@ -104,7 +104,7 @@
                                         "astronomical": { "type": ["string", "null"] },
                                         "lunar": { "type": ["string", "null"] },
                                         "kilometers": { "type": ["string", "null"] },
-                                        "miles": { "type": ["string", "null"] },
+                                        "miles": { "type": ["string", "null"] }
                                     },
                                 },
                                 "orbiting_body": { "type": ["string", "null"]}
@@ -143,12 +143,12 @@
                                 "properties":{
                                     "orbit_class_type": { "type": ["string", "null"] },
                                     "orbit_class_range": { "type": ["string", "null"] },
-                                    "orbit_class_description": { "type": ["string", "null"] },
+                                    "orbit_class_description": { "type": ["string", "null"] }
                                 }
                             }
                         }
                     },
-                    "is_sentry_object": { "type": "boolean" },
+                    "is_sentry_object": { "type": "boolean" }
                 }
             }
         }
