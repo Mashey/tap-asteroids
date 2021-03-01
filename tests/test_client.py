@@ -1,15 +1,11 @@
-from tap_asteroids import __version__
 import pytest, os 
 from tap_asteroids.client import AsteroidClient
 from dotenv import load_dotenv
 
 load_dotenv()
 config = {
-    "apikey": os.getenv('NASA_KEY'),
+    "api_key": os.getenv('api_key'),
 }
-
-def test_version():
-    assert __version__ == '0.1.0'
 
 
 @pytest.mark.vcr()
@@ -135,64 +131,3 @@ def test_get_browse_neos():
             assert 'kilometers' in miss_distance
             assert 'lunar' in miss_distance
             assert 'miles' in miss_distance
-
-
-@pytest.mark.vcr()
-def test_get_feed_neos():
-    client = AsteroidClient(config=config)
-    start_date = '2020-01-01'
-    end_date = '2020-01-08'
-    response = client.get_feed_neos(start_date, end_date)
-
-    assert 3 == len(response.keys())
-    assert 'links' in response
-    assert 'element_count' in response
-    assert 'near_earth_objects' in response
-
-    links = response['links']
-    assert 3 == len(links.keys())
-    assert 'next' in links
-    assert 'prev' in links
-    assert 'self' in links
-
-    near_earth_objects = response['near_earth_objects']
-    for date_key, value in near_earth_objects.items():
-        for near_earth_object in value:
-            assert 10 == len(near_earth_object.keys())
-            assert 'absolute_magnitude_h' in near_earth_object
-            assert 'close_approach_data' in near_earth_object
-            assert 'estimated_diameter' in near_earth_object
-            assert 'id' in near_earth_object
-            assert 'is_potentially_hazardous_asteroid' in near_earth_object
-            assert 'is_sentry_object' in near_earth_object
-            assert 'links' in near_earth_object
-            assert 'name' in near_earth_object
-            assert 'nasa_jpl_url' in near_earth_object
-            assert 'neo_reference_id' in near_earth_object
-
-            close_approach_data = near_earth_object['close_approach_data']
-            for data in close_approach_data:
-                assert 'close_approach_date' in data
-                assert 'close_approach_date_full' in data
-                assert 'epoch_date_close_approach' in data
-                assert 'miss_distance' in data
-                assert 'orbiting_body' in data
-                assert 'relative_velocity' in data
-
-                miss_distance = data['miss_distance']
-                assert 4 == len(miss_distance.keys())
-                assert 'astronomical' in miss_distance
-                assert 'kilometers' in miss_distance
-                assert 'lunar' in miss_distance
-                assert 'miles' in miss_distance
-
-            estimated_diameter = near_earth_object['estimated_diameter']
-            assert 4 == len(estimated_diameter.keys())
-            assert 'kilometers' in estimated_diameter
-            assert 'meters' in estimated_diameter
-            assert 'miles' in estimated_diameter
-            assert 'feet' in estimated_diameter
-
-            links = near_earth_object['links']
-            assert 1 == len(links.keys())
-            assert 'self' in links
