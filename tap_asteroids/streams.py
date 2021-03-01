@@ -16,7 +16,7 @@ class Stream:
     def sync(self, *args, **kwargs):
         raise NotImplementedError("Sync of child class not implemented")
 
-class CalalogStream(Stream):
+class CatalogStream(Stream):
     replication_method: 'INCREMENTAL'
 
 class FullTableStream(Stream):
@@ -30,7 +30,7 @@ class BrowseNeos(CatalogStream):
     def get_all_asteroids(page_num = 0):
         pass
 
-class FeedNeos(CalalogStream):
+class FeedNeos(CatalogStream):
     tap_stream_id = 'feed_neos'
     key_properties = ['ID']
     object_type = 'FeedNeos'
