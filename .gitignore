@@ -1,3 +1,8 @@
 tests/__pycache__
 tests/cassettes
 tap_asteroids/__pycache__
+.env 
+config.json
+.vscode 
+.pytest_cache
+test.json
