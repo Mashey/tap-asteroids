@@ -18,7 +18,7 @@
                 "total_elements": { "type": ["integer", "null"] },
                 "total_pages": { "type": ["integer", "null"] },
                 "number" : { "type": ["integer", "null"] }
-            },
+            }
         },
         "near_earth_objects": {
             "type": ["array", "null"],
@@ -50,7 +50,7 @@
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
                                     "estimated_diameter_max": { "type": ["number", "null"] }
-                                },
+                                }
                             },
                             "meters": {
                                 "type": ["object", "null"],
@@ -58,7 +58,7 @@
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
                                     "estimated_diameter_max": { "type": ["number", "null"] }
-                                },
+                                }
                             },
                             "miles": {
                                 "type": ["object", "null"],
@@ -66,7 +66,7 @@
                                 "properties": {
                                     "estimated_diameter_min": { "type": ["number", "null"] },
                                     "estimated_diameter_max": { "type": ["number", "null"] }
-                                },
+                                }
                             },
                             "feet": {
                                 "type": ["object", "null"],
@@ -105,7 +105,7 @@
                                         "lunar": { "type": ["string", "null"] },
                                         "kilometers": { "type": ["string", "null"] },
                                         "miles": { "type": ["string", "null"] }
-                                    },
+                                    }
                                 },
                                 "orbiting_body": { "type": ["string", "null"]}
                             }

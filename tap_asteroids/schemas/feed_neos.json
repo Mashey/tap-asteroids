@@ -26,7 +26,7 @@
                                 "additionalProperties": false,
                                 "properties": {
                                     "self": {"type": ["string", "null"]}
-                                },
+                                }
                             },
                             "id": { "type": ["string", "null"]},
                             "neo_reference_id": { "type": ["string", "null"]},
@@ -42,7 +42,7 @@
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
                                             "estimated_diameter_max": { "type": ["number", "null"] }
-                                        },
+                                        }
                                     },
                                     "meters": {
                                         "type": ["object", "null"],
@@ -50,7 +50,7 @@
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
                                             "estimated_diameter_max": { "type": ["number", "null"] }
-                                        },
+                                        }
                                     },
                                     "miles": {
                                         "type": ["object", "null"],
@@ -58,7 +58,7 @@
                                         "properties": {
                                             "estimated_diameter_min": { "type": ["number", "null"] },
                                             "estimated_diameter_max": { "type": ["number", "null"] }
-                                        },
+                                        }
                                     },
                                     "feet": {
                                         "type": ["object", "null"],
