@@ -1,4 +1,4 @@
-import pytest, os, json, os.path
+import pytest, os, json
 from os import path
 from tap_asteroids.streams import AllAsteroids
 from tap_asteroids.client import AsteroidClient
