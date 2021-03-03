@@ -29,7 +29,7 @@ def sync(config, state, catalog):
                 stream.replication_key
             )
             
-            for record in stream_obj.records_sync():
+            for record in stream_obj.records_sync(1):
                 transformed_record = transformer.transform(
                     record, stream_schema, stream_metadata
                 )
@@ -43,6 +43,13 @@ def sync(config, state, catalog):
 
             current_time = datetime.now(
                 timezone.utc).strftime("%Y/%m/%d %H:%M:%S")
+            
+            singer.write_bookmark(
+                stream_obj.state,
+                tap_stream_id,
+                replication_key,
+                'TEST STRING' # record count
+            )
 
             singer.write_state(state)
             

@@ -1,8 +1,12 @@
-tests/__pycache__
+*__pycache__
 tests/cassettes
+tests/fixtures
 tap_asteroids/__pycache__
-.env 
 config.json
+test.json
+state.json
+catalog.json
+poetry.lock
+.env 
 .vscode 
 .pytest_cache
-test.json
