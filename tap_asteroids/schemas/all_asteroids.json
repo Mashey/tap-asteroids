@@ -96,7 +96,7 @@
                 "first_observation_date":       { "type": ["string", "null"]},
                 "last_observation_date":        { "type": ["string", "null"]},
                 "data_arc_in_days":             { "type": ["number", "null"]},
-                "observations_used ":           { "type": ["number", "null"]},
+                "observations_used":           { "type": ["number", "null"]},
                 "orbit_uncertainty":            { "type": ["string", "null"]},
                 "minimum_orbit_intersection":   { "type": ["string", "null"]},
                 "jupiter_tisserand_invariant":  { "type": ["string", "null"]},
