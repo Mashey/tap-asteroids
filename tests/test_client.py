@@ -1,12 +1,18 @@
-import pytest, os 
+import pytest, os, json
+from unittest.mock import MagicMock
 from tap_asteroids.client import AsteroidClient
 from dotenv import load_dotenv
 
 load_dotenv()
-config = {
-    "api_key": os.getenv('api_key'),
-}
+config = { "api_key": os.getenv('api_key') }
 
+def test_mock_get_browse_neos():
+    with open('tests/fixtures/all_asteroids.json') as json_obj:
+        fixture = json.load(json_obj)
+
+    client = AsteroidClient(config=config)
+    client.get_browse_neos = MagicMock(return_value = fixture)
+    assert fixture == client.get_browse_neos()
 
 @pytest.mark.vcr()
 def test_get_browse_neos():
