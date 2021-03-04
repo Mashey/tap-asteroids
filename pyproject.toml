@@ -3,6 +3,9 @@ name = "tap-asteroids"
 version = "0.1.0"
 description = ""
 authors = ["Ross Perry <perryr16@gmail.com>"]
+packages = [
+  { include = "tap_asteroids" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
